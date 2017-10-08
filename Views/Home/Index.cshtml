@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">This is an example application to insert data to your database via Excel file.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        @using (Html.BeginForm("ExcelUpload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+          
+                <p>  Submit your file: </p>
+                <label class="btn btn-default">
+                    <input class="files" type="file" name="postedFile" />
+                </label>
+                <input class="btn btn-primary" type="submit" value="Import" />
+            
+        }
+    </div>
+  
+    <div class="col-md-6">
+        <table>
+            <tr>
+                <td> </td>
+            </tr>
+
+        </table>
+
+
+    </div>
+</div>
